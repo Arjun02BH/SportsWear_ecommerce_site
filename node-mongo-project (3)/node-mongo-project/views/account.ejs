@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Hannes & Co.</title>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="/images/header/favicon.svg">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="/index.ejs"><img src="/images/header/complogo.png" alt="comp" width="225px"></a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.ejs">Home</a></li>
+                        <li class="nav-item"><a href="products.ejs">Products</a></li>
+                        <li class="nav-item"><a href="#footer">Contact Us</a></li>
+                        <li class="nav-item"><a href="account.ejs">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.ejs"><img class="cart" src="/images/header/cart.svg"></a>
+                <div class="toggle"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="formPage">
+            <div class="btn" id="removeLog" onclick="login()">Existing User? Login</div>
+            <div class="btn" id="removeReg" onclick="register()">New User? Register</div>
+            <!-- Login Form -->
+            <form class="showForm" id="loginForm" action="/login" method="POST">
+                <h3>Login</h3>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+                <a href="#">Forgot Password</a> <!-- Replace "#" with your forgot password link -->
+            </form>
+            <!-- Registration Form -->
+            <form class="showForm" id="registerForm" action="/register" method="POST">
+                <h3>Register</h3>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <small>I agree to the following Terms and Conditions*</small>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="child">
+                <div class="footerChild1">
+                    <img src="/images/header/complogo.png">
+                    <h4>Mail us at: <a href="mailto:hannes@hannesdev.xyz">hannesc@hannesdev.xyz</a></h4>
+                </div>
+                <div class="footerChild2">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li> <!-- Replace "#" with your payments link -->
+                        <li><a href="#">Shipping</a></li> <!-- Replace "#" with your shipping link -->
+                        <li><a href="#">Return Policy</a></li> <!-- Replace "#" with your return policy link -->
+                        <li><a href="#">FAQ Topics</a></li> <!-- Replace "#" with your FAQ topics link -->
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Our Socials</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li> <!-- Replace "#" with your Instagram link -->
+                        <li><a href="#">Facebook</a></li> <!-- Replace "#" with your Facebook link -->
+                        <li><a href="#">Twitter</a></li> <!-- Replace "#" with your Twitter link -->
+                        <li><a href="#">Linkedin</a></li> <!-- Replace "#" with your Linkedin link -->
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Registered Office</h3>
+                    <ul>
+                        <li>Apartment A13, Floor 15,</li>
+                        <li>Sunnyvale Park,</li>
+                        <li>Ilinois, CA.</li>
+                        <li>-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="belowfooter">
+                &copy; Hannes & Co. Associates, 2023 <br>
+                Aditya Chakravorty, All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
